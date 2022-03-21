@@ -7,6 +7,7 @@ https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503
 - Detic：imagenet-2iKをweakly-superviedで学習させたもの。
 - cocoより広い意味領域での検出が可能になるので今回の問題に最適
 - cocoのような検出データセットでは、一般的な検出方法でモデルを学習する。一方、imagenet-21Kでは、最大のrpn-proposalを選択し、分類損失を計算する。
+- RPN：物体が写っている場所と、その矩形の形を検出する機械学習モデル
 
 ![uQjAQ6i](https://user-images.githubusercontent.com/53257509/159230487-ecb3910e-fa1e-488c-be10-f1888a3536ae.png)
 
