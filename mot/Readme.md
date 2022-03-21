@@ -1,5 +1,6 @@
 
-### 0321
+## 3月
+### 21
 https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503  
 - Deticによる切り抜きデータセットを作成
 - dataset link: https://www.kaggle.com/phalanx/whale2-cropped-dataset
