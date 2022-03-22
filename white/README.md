@@ -51,9 +51,6 @@ https://www.kaggle.com/c/ventilator-pressure-prediction/discussion/282735
 https://www.kaggle.com/code/aikhmelnytskyy/happywhale-effnet-b7-fork-with-detic-training/notebook
 学習はこのURL
 
-
-# おのおののモデルの差異は？？
-
 閾値をいろいろ試し最適な値を求める。
 
 **Comment**
