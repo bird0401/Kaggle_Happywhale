@@ -67,5 +67,47 @@ A. 異なるfoldで学習させた五つのモデルの平均値を取得して�
 このノートブックについてのDisscussion
 https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/310119
 
+---
+
+### [日本語&ENG] HappyWhale effnetv2-m ゆっくり実況 [infer] https://www.kaggle.com/code/pixyz0130/eng-happywhale-effnetv2-m-infer
+
+efficient-v2 を使うときはTPUを使用する。
+
+https://www.kaggle.com/code/aikhmelnytskyy/happywhale-arcface-baseline-eff-net-kfold5-0-652/notebook
+このノートブックのefficient-v1をefficient-v2に変更したのみ
+
+---
+
+### HappyWhale ArcFace Baseline (TPU) https://www.kaggle.com/code/ks2019/happywhale-arcface-baseline-tpu
+
+はじめてArcFaceを用いたノートブック。
+かなり多くのノートブックの元になっている感じ。
+
+---
+
+### [Pytorch] ArcFace + GeM Pooling Starter https://www.kaggle.com/code/debarshichanda/pytorch-arcface-gem-pooling-starter
+
+GeM Pooling 
+
+from https://github.com/lyakaap/Landmark2019-1st-and-3rd-Place-Solution/blob/master/src/modeling/metric_learning.py
+
+
+
+ArcFace 
+
+
+Comments 
+
+Q. What is 'n_accumulate' in CONFIG?
+
+A. This is for gradient accumulation. In this notebook, it is set to 1 so it makes no difference but in cases of using big models, batch size needs to be reduced(eg. 2) which leads to noisy gradients. So in this case we can accumulate the loss for some batches(eg. 4) and then do a backward pass. This increases our effective batch size to 2 * 4 = 8
+
+<img width="522" alt="image" src="https://user-images.githubusercontent.com/48637189/159489407-bb51e510-ba80-4815-a6f3-a58a84eba795.png">
+
+Q. なんでK-Foldで自動のやつを使わないのか？
+
+A. 今回のコンペなら時間的に余裕があるが、普通は余裕がないためmanualで操作したものを使用する。
+
+
 
 
