@@ -26,6 +26,7 @@ https://www.kaggle.com/code/yamsam/simple-ensemble-of-public-best-kernels
 Model : EfficientNetB6
 
 今まで：一つのモデルをone foldで学習させたものだけを使用していた。
+
 今回　：五つのモデルを別々に学習させた。-> **スコア5%上がった**
 
 
@@ -47,6 +48,7 @@ https://www.kaggle.com/c/ventilator-pressure-prediction/discussion/282735
 
 
 事前に学習した五つのモデルの重みをロードしている。
+
 このノートブックでは学習を回していない。
 https://www.kaggle.com/code/aikhmelnytskyy/happywhale-effnet-b7-fork-with-detic-training/notebook
 学習はこのURL
@@ -55,9 +57,11 @@ https://www.kaggle.com/code/aikhmelnytskyy/happywhale-effnet-b7-fork-with-detic-
 
 **Comment**
 Q. TFRecordsから既に処理済みのTest Datasetを取得してたけどどうやってるの？
+
 A. Private datasetにすでにアクセスしてる。train の方でかくにんしてね。
 
 Q. ひとつの画像に五つの予測をしてる？
+
 A. 異なるfoldで学習させた五つのモデルの平均値を取得してる。
 
 このノートブックについてのDisscussion
