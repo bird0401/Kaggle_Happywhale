@@ -31,3 +31,5 @@ https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503
 - 画像を入れると、そこに存在するオブジェクトを矩形で囲い、名詞と確率のペアを出力
 - 20000クラスの予測ができる
 - 正解ラベルを絞ることも可能
+### 次やること
+- これを利用した予測モデル: https://www.kaggle.com/code/dragonzhang/happywhale-effnet-b7-fork-with-detic-crop
