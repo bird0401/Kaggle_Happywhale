@@ -1,6 +1,6 @@
 
-## 3月
-### 21
+# 3月
+## 21
 https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503  
 - Deticによる切り抜きデータセットを作成
 - dataset link: https://www.kaggle.com/phalanx/whale2-cropped-dataset
@@ -22,7 +22,7 @@ https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503
 
 ![3cAFvvl](https://user-images.githubusercontent.com/53257509/159230291-c9a5beed-5118-4bba-b1a9-3d130f704f48.png)
 
-### 23
+## 23
 - Detic使ってみた in colab:
 - imagenetを使った事前学習モデル
 - 画像を入れると、そこに存在するオブジェクトを矩形で囲い、名詞と確率のペアを出力
