@@ -11,7 +11,7 @@ https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503
 - cocoのような検出データセットでは、一般的な検出方法でモデルを学習する。一方、imagenet-21Kでは、最大のrpn-proposalを選択し、分類損失を計算する。
 - RPN：物体が写っている場所と、その矩形の形を検出する機械学習モデル
 
-![uQjAQ6i](https://user-images.githubusercontent.com/53257509/159230487-ecb3910e-fa1e-488c-be10-f1888a3536ae.png)
+<img src="https://user-images.githubusercontent.com/53257509/159230487-ecb3910e-fa1e-488c-be10-f1888a3536ae.png" width=50%>
 
 このデータセットの作り方
 1. イルカ、クジラ、海洋生物のクラスで物体を検出する。
@@ -22,7 +22,7 @@ https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503
 - モデルはより小さな領域を高い信頼度で予測することもある。
 - そのため下画像のような検出結果も含まれる。
 
-![3cAFvvl](https://user-images.githubusercontent.com/53257509/159230291-c9a5beed-5118-4bba-b1a9-3d130f704f48.png)
+<img src="https://user-images.githubusercontent.com/53257509/159230291-c9a5beed-5118-4bba-b1a9-3d130f704f48.png" width=25%>
 
 ## 23
 - Detic使ってみた in colab: https://colab.research.google.com/drive/1lp5NbqiC_YIsWTHAGeWbKhb0DJ8x6Or0
@@ -31,5 +31,8 @@ https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503
 - 画像を入れると、そこに存在するオブジェクトを矩形で囲い、名詞と確率のペアを出力
 - 20000クラスの予測ができる
 - 正解ラベルを絞ることも可能
+
+<img src="https://user-images.githubusercontent.com/53257509/159693326-443a167c-dba2-44fe-9d80-76b78a469256.JPG" width=40%> <img src="https://user-images.githubusercontent.com/53257509/159693338-7c87482c-3719-4fec-bd97-22b399e5e3ff.jpg" width=40%>
+
 ### 次やること
 - これを利用した予測モデル: https://www.kaggle.com/code/dragonzhang/happywhale-effnet-b7-fork-with-detic-crop
