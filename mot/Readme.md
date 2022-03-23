@@ -1,5 +1,7 @@
 
 # 3月
+やったdiscussion
+- https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503
 ## 21
 https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503  
 - Deticによる切り抜きデータセットを作成
@@ -23,9 +25,9 @@ https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503
 ![3cAFvvl](https://user-images.githubusercontent.com/53257509/159230291-c9a5beed-5118-4bba-b1a9-3d130f704f48.png)
 
 ## 23
-- Detic使ってみた in colab:
+- Detic使ってみた in colab: https://colab.research.google.com/drive/1lp5NbqiC_YIsWTHAGeWbKhb0DJ8x6Or0
+### detic
 - imagenetを使った事前学習モデル
 - 画像を入れると、そこに存在するオブジェクトを矩形で囲い、名詞と確率のペアを出力
 - 20000クラスの予測ができる
 - 正解ラベルを絞ることも可能
-- 切り抜きデータセットを使った予測
