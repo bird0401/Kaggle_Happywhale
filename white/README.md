@@ -1,5 +1,35 @@
 # HappyWhale 
 
+## 2022/03/25
+### [D] cropped&resized(512x512) dataset using detic https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/305503
+
+Cropped dataset with Detic
+
+cocoa : small box size
+
+detic : bigger box size
+
+**How to create this dataset:**
+
+1. Detect objects in the class of dolphins, whales, and marine life.
+2. Select the largest bbox from the detection result and enlarge bbox by 1.2 times. then, crop&resize it.
+3. If not found, just resize the image without cropping.
+
+**Problem**
+Since the model may predict smaller proposals with higher confidence, some detection results like the one in the image below are included.
+If you are interested in false-positive result, please confirm csv file.
+
+https://i.imgur.com/3cAFvvl.png![image](https://user-images.githubusercontent.com/48637189/160092868-c15c8d4e-cc40-4464-85f6-dacfca88c3e2.png)
+
+Dataset link: https://www.kaggle.com/phalanx/whale2-cropped-dataset
+
+
+**Comment**
+
+Using this method in one kernel
+
+https://www.kaggle.com/code/lextoumbourou/happywhale-effnet-b6-fork-with-detic-crop/notebook
+
 ## 2022/03/22
 
 ### simple ensemble of public best kernels
