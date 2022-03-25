@@ -49,9 +49,19 @@ https://i.imgur.com/Gt9F5nZ.png![image](https://user-images.githubusercontent.co
 - image annotations : some images have digital marking 
 https://i.imgur.com/tQj1qxf.png![image](https://user-images.githubusercontent.com/48637189/160098895-48c09e41-431a-4722-a710-2abab6900cb5.png)
 
+- image duplicates : some images are same
+- lighting : sometimes the water can be greenish, sometimes bluish, sometimes pink (because of a sunset for example). 
+- some onject : penguins and people, board
+- ice : many pictures contain ice 
 
+**Comments**
 
+In some cases it is better to discard some images!
 
+**Conclusion**
+
+- Change RGB into B&W
+- Can we use aditional data (Ice, Penguin, People)
 
 ---
 
