@@ -30,6 +30,29 @@ Using this method in one kernel
 
 https://www.kaggle.com/code/lextoumbourou/happywhale-effnet-b6-fork-with-detic-crop/notebook
 
+### [D] 🐧 Things to know before starting image preprocessing https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/308026
+
+Overview of Datsets
+
+- imgae_size : so various.
+- night view 
+https://i.imgur.com/5IWktBo.png![image](https://user-images.githubusercontent.com/48637189/160098531-8610d42f-895f-4137-8e6f-ec9ac983ff74.png)
+
+-multiple indivisuals : more than two subjects
+https://i.imgur.com/uQgnu1h.png![image](https://user-images.githubusercontent.com/48637189/160098641-0343a836-cdd0-4f40-8b1a-f456c1b7055c.png)
+
+- landscape : Almost of landscape
+https://i.imgur.com/Gt9F5nZ.png![image](https://user-images.githubusercontent.com/48637189/160098822-5516dead-b23c-49c5-8ab5-ea1f9e157b90.png)
+
+- image annotations : some images have digital marking 
+https://i.imgur.com/tQj1qxf.png![image](https://user-images.githubusercontent.com/48637189/160098895-48c09e41-431a-4722-a710-2abab6900cb5.png)
+
+
+
+
+
+---
+
 ## 2022/03/22
 
 ### simple ensemble of public best kernels
