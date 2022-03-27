@@ -39,7 +39,7 @@ https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503
 
 ## 27
 ### ベースラインモデルの確認
-https://www.kaggle.com/aikhmelnytskyy/happywhale-arcface-baseline-eff7-tpu-768-inference  にコメントアウトしてまとめた。
+https://www.kaggle.com/aikhmelnytskyy/happywhale-arcface-baseline-eff7-tpu-768-inference  にコメントアウトしてまとめた。datasetをcolabで用いる方法がわからないため止まっている。
 ### notebookの使い方確認
 - GPU、TPU１週間あたり30時間まで
 - TPUは、colabと比較してKaggleの方が早い
