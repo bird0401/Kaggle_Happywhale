@@ -36,3 +36,12 @@ https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503
 
 ### 次やること
 - これを利用した予測モデル: https://www.kaggle.com/code/dragonzhang/happywhale-effnet-b7-fork-with-detic-crop
+
+## 27
+### ベースラインモデルの確認
+https://www.kaggle.com/aikhmelnytskyy/happywhale-arcface-baseline-eff7-tpu-768-inference  にコメントアウトしてまとめた。
+### notebookの使い方確認
+- GPU、TPU１週間あたり30時間まで
+- TPUは、colabと比較してKaggleの方が早い
+- Tensorflowを使う場合はGPUよりTPUの方が良い
+- link to githubすればnotebookをsaveした段階で、gitにcommitできる
