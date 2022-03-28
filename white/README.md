@@ -1,5 +1,43 @@
 # HappyWhale 
 
+## 2022/03/28
+### 0.720_🐳&🐬EFF_B5_640_Rotate https://www.kaggle.com/code/nghiahoangtrung/0-720-eff-b5-640-rotate/notebook
+https://www.kaggle.com/code/jpbremer/backfins-arcface-tpu-effnet/notebook ベースになったコード
+
+
+```
+# Data augmentation function
+def data_augment(posting_id, image, label_group, matches):
+
+    ### CUTOUT
+    if tf.random.uniform([])>0.5 and config.CUTOUT:
+      N_CUTOUT = 6
+      for cutouts in range(N_CUTOUT):
+        if tf.random.uniform([])>0.5:
+           DIM = config.IMAGE_SIZE
+           CUTOUT_LENGTH = DIM//8
+           x1 = tf.cast( tf.random.uniform([],0,DIM-CUTOUT_LENGTH),tf.int32)
+           x2 = tf.cast( tf.random.uniform([],0,DIM-CUTOUT_LENGTH),tf.int32)
+           filter_ = tf.concat([tf.zeros((x1,CUTOUT_LENGTH)),tf.ones((CUTOUT_LENGTH,CUTOUT_LENGTH)),tf.zeros((DIM-x1-CUTOUT_LENGTH,CUTOUT_LENGTH))],axis=0)
+           filter_ = tf.concat([tf.zeros((DIM,x2)),filter_,tf.zeros((DIM,DIM-x2-CUTOUT_LENGTH))],axis=1)
+           cutout = tf.reshape(1-filter_,(DIM,DIM,1))
+           image = cutout*image
+
+    image = tf.image.random_flip_left_right(image)
+    # image = tf.image.random_flip_up_down(image)
+#     degree = random.uniform(-10, 10)
+#     image = tfa.image.rotate(image, degree * math.pi / 180)
+    
+    image = tf.image.random_hue(image, 0.01)
+    image = tf.image.random_saturation(image, 0.70, 1.30)
+    image = tf.image.random_contrast(image, 0.80, 1.20)
+    image = tf.image.random_brightness(image, 0.10)
+    return posting_id, image, label_group, matches
+```
+
+
+
+
 ## 2022/03/25
 ### [D] cropped&resized(512x512) dataset using detic https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/305503
 
