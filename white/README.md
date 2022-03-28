@@ -107,6 +107,77 @@ Here it is:
 https://www.kaggle.com/jpbremer/backfin-annotations
 
 
+
+### ⚡️ [EDA] ⚡️ EDA + Visualization + Augmentation 🔥🔥 https://www.kaggle.com/code/sahamed/eda-visualization-augmentation
+
+データ数や提出形式などがかなり詳しく書いてあり、とても参考になる。
+
+```
+bottlenose_dolphin           9664
+beluga                       7443
+humpback_whale               7392
+blue_whale                   4830
+false_killer_whale           3326
+dusky_dolphin                3139
+spinner_dolphin              1700
+melon_headed_whale           1689
+minke_whale                  1608
+killer_whale                 1493
+fin_whale                    1324
+gray_whale                   1123
+bottlenose_dolpin            1117
+kiler_whale                   962
+southern_right_whale          866
+spotted_dolphin               490
+sei_whale                     428
+short_finned_pilot_whale      367
+common_dolphin                347
+cuviers_beaked_whale          341
+pilot_whale                   262
+long_finned_pilot_whale       238
+white_sided_dolphin           229
+brydes_whale                  154
+pantropic_spotted_dolphin     145
+globis                        116
+commersons_dolphin             90
+pygmy_killer_whale             76
+rough_toothed_dolphin          60
+frasiers_dolphin               14
+Name: species, dtype: int64
+```
+
+種族ごとの偏りはかなりある。
+
+**Data Cleaning**
+
+Fixing Duplicate Labels
+- bottlenose_dolpin -> bottlenose_dolphin
+- kiler_whale -> killer_whale
+- beluga -> beluga_whale
+
+
+Changing Label due to extreme similarities
+
+
+- globis & pilot_whale -> short_finned_pilot_whale
+
+
+**Missing data**
+
+None
+
+**Top 5 least frequent individual**
+
+画像が一枚しかない個体は画像を複製する。
+
+<img width="659" alt="image" src="https://user-images.githubusercontent.com/48637189/160413422-bd7178ab-2a57-4795-8e0d-0bab3136461a.png">
+
+
+画像が5枚以下の個体は40%もいる
+
+
+
+
 ## 2022/03/25
 ### [D] cropped&resized(512x512) dataset using detic https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/305503
 
