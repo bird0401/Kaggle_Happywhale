@@ -4,6 +4,7 @@
 ### 0.720_🐳&🐬EFF_B5_640_Rotate https://www.kaggle.com/code/nghiahoangtrung/0-720-eff-b5-640-rotate/notebook
 https://www.kaggle.com/code/jpbremer/backfins-arcface-tpu-effnet/notebook ベースになったコード
 
+ (-10, 10 ) degree回転することで大きく精度を向上させた　0.67->0.72
 
 ```
 # Data augmentation function
@@ -36,6 +37,74 @@ def data_augment(posting_id, image, label_group, matches):
 ```
 
 
+
+### Happywhale - Effnet B7 fork with Detic Training https://www.kaggle.com/code/aikhmelnytskyy/happywhale-effnet-b7-fork-with-detic-training/notebook
+
+Backfins ARCFace TPU Effnet https://www.kaggle.com/code/jpbremer/backfins-arcface-tpu-effnet/notebook
+との違いを見ていく
+
+**データのロードが異なる**
+
+前者
+```
+GCS_PATH = 'gs://kds-2f25b435592b59d6a2e92f82f0316665f6b69e4768d1296342746e85'  # Get GCS Path from kaggle notebook if GCS Path is expired
+if not IS_COLAB:
+    GCS_DS_PATH=KaggleDatasets().get_gcs_path('happywhale-tfrecords-bb')
+    
+train_files = np.sort(np.array(tf.io.gfile.glob(GCS_PATH + '/happywhale-2022-train*.tfrec')))
+test_files = np.sort(np.array(tf.io.gfile.glob(GCS_PATH + '/happywhale-2022-test*.tfrec')))
+print(GCS_PATH)
+print(len(train_files),len(test_files),count_data_items(train_files),count_data_items(test_files))
+```
+
+後者
+```
+GCS_PATH = 'gs://kds-d916c3252bf3bc5b3500b904f05f51ce57c8df85221d11b7711bcda9'  # Get GCS Path from kaggle notebook if GCS Path is expired
+if not IS_COLAB:
+    GCS_PATH1 = KaggleDatasets().get_gcs_path('backfintfrecords')
+    
+train_files = np.sort(np.array(tf.io.gfile.glob(GCS_PATH1 + '/happywhale-2022-train*.tfrec')))
+test_files = np.sort(np.array(tf.io.gfile.glob(GCS_PATH1 + '/happywhale-2022-test*.tfrec')))
+print(GCS_PATH)
+print(len(train_files),len(test_files),count_data_items(train_files),count_data_items(test_files))
+```
+
+前者：effnetv1_b7
+
+後者：effnetv1_b5
+
+結論
+
+データセットの違いと使用モデルの差異
+
+### Happywhale[0.679] https://www.kaggle.com/code/andrej0marinchenko/happywhale-0-679/notebook
+
+わからない
+
+### [D]Releasing my Dorsal Fin Dataset & Code https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/310153
+
+製作者は時間なくて参加できないから後悔したデータセット
+
+Comment
+
+Q　なんで尾鰭だけ？体も使った方がいいのでは？
+
+A データにばらつきが出るため
+
+Q "It includes bounding boxes for 4500 whales with a dorsal fin, not including beluge, southern right whale and gray whale."　ってあるけどなんで三種類は採用していない？
+
+A それらは尾鰭が他の者たちと同じようについていないため
+
+これ参照　https://www.kaggle.com/code/kwentar/what-about-species/notebook
+
+
+
+**Object Detection**
+
+It includes bounding boxes for 4500 whales with a dorsal fin, not including beluge, southern right whale and gray whale.
+Please upvote the dataset if you are using it in your pipeline
+Here it is:
+https://www.kaggle.com/jpbremer/backfin-annotations
 
 
 ## 2022/03/25
