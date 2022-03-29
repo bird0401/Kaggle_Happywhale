@@ -1,5 +1,27 @@
 # HappyWhale 
 
+## 2022/03/29
+
+**よく出てくるデータセットについて**
+HappyWhaleSplits：individual id を全て0 index に置き変えた。
+
+https://www.kaggle.com/datasets/ks2019/happywhale-splits
+
+TFRecords：不均衡データセットの場合にそのデータセットの偏りが少なくなるようにtrainとtestを分割しているみたい。具体的にはStratifiedKFoldを用いている。(下画像)
+
+https://www.kaggle.com/ks2019/happywhale-tfrecords　https://www.kaggle.com/ks2019/happywhale-tfrecords-v1
+
+
+処理しているノートブック：https://www.kaggle.com/code/ks2019/happywhale-tfrecords/notebook
+
+![image](https://user-images.githubusercontent.com/48637189/160507155-0c146ae3-37c1-4f5f-945b-07721b778159.png)
+
+分割の手法　https://www.case-k.jp/entry/2021/02/14/155742#:~:text=StratifiedKFold,%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E3%82%8F%E3%81%8B%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82
+
+
+
+---
+
 ## 2022/03/28
 ### 0.720_🐳&🐬EFF_B5_640_Rotate https://www.kaggle.com/code/nghiahoangtrung/0-720-eff-b5-640-rotate/notebook
 https://www.kaggle.com/code/jpbremer/backfins-arcface-tpu-effnet/notebook ベースになったコード
