@@ -19,6 +19,11 @@ https://www.kaggle.com/ks2019/happywhale-tfrecords　https://www.kaggle.com/ks20
 分割の手法　https://www.case-k.jp/entry/2021/02/14/155742#:~:text=StratifiedKFold,%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E3%82%8F%E3%81%8B%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82
 
 
+動作確認完了
+[Backfins ARCFace TPU Effnet
+](https://www.kaggle.com/code/jpbremer/backfins-arcface-tpu-effnet/notebook)
+
+二つ目が必ずnew_indivisualなの気になる。
 
 ---
 
