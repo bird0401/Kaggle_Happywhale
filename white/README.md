@@ -38,76 +38,161 @@ Detic　を用いたクロップの手法。完璧ではない
 1. Start with Smaller Resolution
 
 
+今回用の加工されたデータセットまとめ
+
+
+(Dataset Dataset Dataset)[https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/309691]
 
 2. Start with subsets of Data:
-Continuing with the previous line, you should start with just a small number of classes or examples and validate your training models there.
-
-Ex: Train on 10 classes, check if it improves CV -> Submit
-Scale idea to 20 classes, check CV, and submit again
-
-If all goes well, train on the complete dataset.
+少ないクラス数から始める。
 
 3. Use FP16 or Half-Precision Training:
 Who doesn't want up to 50% faster training?
-
-NVIDIA GPUs have Tensor-Cores which offer huge speedups when using "Half-Precision" Tensors. I have written a more detailed blog here, the short version is to try using fp_16 training to observe speedups on any GPU (and TPU!)
+NVIDIA GPUs have Tensor-Cores which offer huge speedups when using "Half-Precision" Tensors. I have written a more detailed blog here, the short version is to try using fp_16 training to observe speedups on any GPU (and TPU!)
 
 4. Use TPUs:
-Kaggle offers 20 hours of TPUs every week. TPUs have 8 cores, which allow your batch_sizes to be scaled by a factor of 8. This allows for much faster training and faster iteration.
+TPU早くて便利、コア数も８あるから大きデータ数にもスケールできる。
 
 Note: I have recently discovered Hugging Face Accelerate which claims to give you easy workflow on TPUs with PyTorch too
 
 5. Progressive Resizing:
-This idea IIRC was introduced in the Efficientnet papers and also taught in the fastai courses.
 
-Chris Deotte has a fantastic post talking about CNN Input image sizes. This blog teaches you how progressive resizing works in fastai. TL;DR:
+学習する画像サイズを変えることで収束を早くする。
 
-Train model on size: small
-Save weights and re-train model on larger image size
-Save weights again and re-train on final image sizes
+Chris Deotte has a fantastic post talking about CNN Input image sizes. This blog teaches you how progressive resizing works in fastai. TL;DR:
+* Train model on size: small
+* Save weights and re-train model on larger image size
+* Save weights again and re-train on final image sizes
 This process allows much faster convergence and better performance
 
-6. Experiment: Depthwise Convs instead of Regular Convs:
-I believe this concept was introduced in the MobileNet paper first and I saw it resurface in a recent discussion related to ConvNext architectures. Depthwise Convolutions have fewer filters and hence train faster.
 
-See here for some tips on making it work in PyTorch
+6. Experiment: Depthwise Convs instead of Regular Convs:
+
+Depthwise Convolutions はフィルター数が少なく普通のたたみ込みより収束が早い。
+
+I believe this concept was introduced in the MobileNet paper first and I saw it resurface in a recent discussion related to ConvNext architectures. Depthwise Convolutions have fewer filters and hence train faster.
+
+See here for some tips on making it work in PyTorch
+
+
 
 7. LR Scheduler:
-Changing your learning_rate during the training of your model:
 
-A slow lr takes too long and fast lr might not help your model converge, using this logic, we should use dynamic learning rates.
+動的に学習率が変化するスケジューラーを使おう。
 
-There are many schedulers that allow this: I would recommend using fastai and its fine_tune() or fit_one_cycle() function. See here for more details.
+There are many schedulers that allow this: I would recommend using fastai and its fine_tune() or fit_one_cycle() function. See here for more details.
+
+
 
 8. LR Warmup:
 This one is in-line with the previous one:
+From the paper, "Bag of Tricks", one of the ticks highlights using LR warmup.
 
-From the paper, "Bag of Tricks", one of the ticks highlights using LR warmup:
-
-When you start training a model, it has more "randomness" as it's just starting to learn features, hence starting with a smaller learning_rate first allows it to pick details, and later you can increase it to the expected schedule or value after the "warmup" epochs are done and your model has learned some details.
+小さい学習率からだんだん上げていくのが良い。
 
 9. Image Augmentations:
-NNs benefit from more data. A slight change in an image can really help a model improve its understanding of features inside of an image.
 
-Using correct image augmentations can really help your model. I had posted a nb sharing fastai image augmentations tutorial, I will be sharing an updated one for this competition soon if it's helpful.
+ほんと少しの変化でも精度は上がる。正しいAugumentation を行おう。
 
-Chris Deotte in his recent CTDS interview shared some secrets. Qishen Ha, whose team had won the TF GBR competition also shared some tips of making these work
+Chris Deotte in his recent CTDS interview shared some secrets. Qishen Ha, whose team had won the TF GBR competition also shared some tips of making these work
 
-TL;DR of both: Try a lot of experiments and try as many augmentations. Start with augmentations off and then add them one by one to see if your training improves.
-
-Also, visualise results as you train models to make sure they're learning about the whales and not backgrounds!
-
-I have two more bonus suggestions for anyone that has read this far :)
+背景ではなく、クジラを学んでいることを確認しよう。
 
 Bonus Tip #1: Use Timm or Tfimm:
-Timm and Tfimm, the latter being a TF-port of the former is a fantastic resource! Ross, posts almost all the cutting edge model weights along with extremely optimised training methods. I would highly recommend also spending time digging into their source code but at the least using the library is a solid suggestion for anyone working on CV problems
-
+Timm and Tfimm, the latter being a TF-port of the former is a fantastic resource! Ross, posts almost all the cutting edge model weights along with extremely optimised training methods. I would highly recommend also spending time digging into their source code but at the least using the library is a solid suggestion for anyone working on CV problems
 Bonus Tip #2: Use NGC Containers for Local training:
-I understand many people are using Kaggle kernels and Colab for training. However, if you've invested in local hardware, Ross had taught in a thread on Twitter that the NGC Containers for PyTorch are very optimised and offer speedups
-
+I understand many people are using Kaggle kernels and Colab for training. However, if you've invested in local hardware, Ross had taught in a thread on Twitter that the NGC Containers for PyTorch are very optimised and offer speedups
 I hope you find these helpful and also find some training or score boosts! :)
-
 Happy Kaggling!
+
+
+[Releasing my Dorsal Fin Dataset & Code
+](https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/310153)
+
+尾びれだけを抜きだした画像セット
+
+[Reduced Resolution Image Data (128 x 128, 256 x 256, 384 x 384) 🐋
+](https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/304686)
+
+画像のサイズを落としたデータセットの紹介
+
+1. (128 x 128 dataset) https://www.kaggle.com/rdizzl3/jpeg-happywhale-128x128
+2. (256 x 256 dataset) https://www.kaggle.com/rdizzl3/jpeg-happywhale-256x256
+3. (384 x 384 dataset) https://www.kaggle.com/rdizzl3/jpeg-happywhale-384x384
+
+
+[Previous Happywhale Competition Solutions
+](https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/304504)
+
+前回のHappyWhaleの解法
+
+
+[7 More Computer Vision Tricks to Improve Score
+](https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/311211)
+
+
+1. Test Time Augmentation (TTA):
+テストセットの方にもトレインと同じ画像処理をしよう
+
+2. Sequential Unfreezing while Transfer Learning:
+I learned this trick during the fastai course. When we are performing transfer learning, our model has already captured a lot of information.
+The initial layers (Layers close to inputs) retain more info about the structure of objects, etc and the latter layers (close to output) learn more about the dataset. We can envision our model to be grouped in layers like so:
+Input(Group) -> HiddenSetEarly -> HiddenSetLater -> Output(Group)
+When performing transfer learning, its usually a good idea to just train the last few layers and then unfreeze the earlier layers sequentially
+
+3. Differential Learning Rates:
+Continuing with the previous point, another trick I learned via fastai:
+The initial few layers need little to no re-training, so applying differential learning rates to a different group of CNN layers is a great idea:
+Ex: Output(Group): Lr = 10e-3 HiddenSetLater: LR = 0.5 * 10e-4 Input(Group): Lr = 10e-5
+This would make minimal changes to the initial layers and more changes to the head (output) layers making our model converge a bit faster
+
+異なる層に異なる学習率を割り当てたってことか？
+
+4. PyTorch: use LazyLayers
+Note: I learned this trick thanks to Datasaurus, please see his post here
+
+self.fc = nn.LazyLinear(self.cfg.target_size)
+Note: This would otherwise be self.fc = nn.Linear(self.n_features, self.cfg.target_size)
+Once again, thanks Datasaurus for sharing this in his original post
+
+5. Label Smoothing:
+We have seen a lot of discussions in this competition about the funny images that exist in the dataset. This is not uncommon, ImageNet and many datasets themselves have many "mislabeled" images. The trick to helping here is using Label Smoothing.
+This is a good writeup about how it works. TL;DR: Adding noise to all labels helps our model generalize better
+
+
+変なラベリングされているものもあるから、訂正したほうがいい。
+
+6. Use GeM Pooling + ArcFace:
+アンバランスなラベルの時によく効く手法
+
+
+
+7. PsuedoLabelling:
+PsuedoLabelling involves a form of semi-supervised learning. Chris Deotte teaches this in his fantastic kernel here
+
+信頼度の高い予測をラベルとして利用すること
+
+Bonus Tip: Use SSDs for image datasets
+
+ローカルで作業しているならば、データはSSDにあることを確認する。
+
+
+(Duplicate names in species, can be merged together
+)[https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/304633]
+
+ことなる表記が見つかったということ。
+
+I observed that there are some duplicates in the species names
+1. bottlenose_dolphin and bottlenose_dolpin
+2. killer_whale and kiler_whale
+On the safer side, there are no overlap of individual_id's between the different naming conventions.
+
+
+(🔥 DATASET - dorsal fins for all IDs without background 🔥
+)[https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/309214]
+
+背景切り取ったデータセット。セグメンテーション使っている。
+
 
 
 
