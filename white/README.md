@@ -17,6 +17,100 @@ TPUがやっぱ制限あるし、エポックも最低限である程度の回�
 作成した。epoch 17,img 128
 これで色々まわそう
 
+---
+
+### Discussion まとめ
+
+#### [cropped&resized(512x512) dataset using detic
+](https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/305503)
+
+Detic　を用いたクロップの手法。完璧ではない
+
+#### [🐧 Things to know before starting image preprocessing (https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/308026)
+
+どのような画像があるかの説明
+
+#### [9 Computer Vision Tricks to Improve Performance
+](https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/310105)
+
+画像コンペの取り組み方や進め方的なもの
+
+1. Start with Smaller Resolution
+
+
+
+2. Start with subsets of Data:
+Continuing with the previous line, you should start with just a small number of classes or examples and validate your training models there.
+
+Ex: Train on 10 classes, check if it improves CV -> Submit
+Scale idea to 20 classes, check CV, and submit again
+
+If all goes well, train on the complete dataset.
+
+3. Use FP16 or Half-Precision Training:
+Who doesn't want up to 50% faster training?
+
+NVIDIA GPUs have Tensor-Cores which offer huge speedups when using "Half-Precision" Tensors. I have written a more detailed blog here, the short version is to try using fp_16 training to observe speedups on any GPU (and TPU!)
+
+4. Use TPUs:
+Kaggle offers 20 hours of TPUs every week. TPUs have 8 cores, which allow your batch_sizes to be scaled by a factor of 8. This allows for much faster training and faster iteration.
+
+Note: I have recently discovered Hugging Face Accelerate which claims to give you easy workflow on TPUs with PyTorch too
+
+5. Progressive Resizing:
+This idea IIRC was introduced in the Efficientnet papers and also taught in the fastai courses.
+
+Chris Deotte has a fantastic post talking about CNN Input image sizes. This blog teaches you how progressive resizing works in fastai. TL;DR:
+
+Train model on size: small
+Save weights and re-train model on larger image size
+Save weights again and re-train on final image sizes
+This process allows much faster convergence and better performance
+
+6. Experiment: Depthwise Convs instead of Regular Convs:
+I believe this concept was introduced in the MobileNet paper first and I saw it resurface in a recent discussion related to ConvNext architectures. Depthwise Convolutions have fewer filters and hence train faster.
+
+See here for some tips on making it work in PyTorch
+
+7. LR Scheduler:
+Changing your learning_rate during the training of your model:
+
+A slow lr takes too long and fast lr might not help your model converge, using this logic, we should use dynamic learning rates.
+
+There are many schedulers that allow this: I would recommend using fastai and its fine_tune() or fit_one_cycle() function. See here for more details.
+
+8. LR Warmup:
+This one is in-line with the previous one:
+
+From the paper, "Bag of Tricks", one of the ticks highlights using LR warmup:
+
+When you start training a model, it has more "randomness" as it's just starting to learn features, hence starting with a smaller learning_rate first allows it to pick details, and later you can increase it to the expected schedule or value after the "warmup" epochs are done and your model has learned some details.
+
+9. Image Augmentations:
+NNs benefit from more data. A slight change in an image can really help a model improve its understanding of features inside of an image.
+
+Using correct image augmentations can really help your model. I had posted a nb sharing fastai image augmentations tutorial, I will be sharing an updated one for this competition soon if it's helpful.
+
+Chris Deotte in his recent CTDS interview shared some secrets. Qishen Ha, whose team had won the TF GBR competition also shared some tips of making these work
+
+TL;DR of both: Try a lot of experiments and try as many augmentations. Start with augmentations off and then add them one by one to see if your training improves.
+
+Also, visualise results as you train models to make sure they're learning about the whales and not backgrounds!
+
+I have two more bonus suggestions for anyone that has read this far :)
+
+Bonus Tip #1: Use Timm or Tfimm:
+Timm and Tfimm, the latter being a TF-port of the former is a fantastic resource! Ross, posts almost all the cutting edge model weights along with extremely optimised training methods. I would highly recommend also spending time digging into their source code but at the least using the library is a solid suggestion for anyone working on CV problems
+
+Bonus Tip #2: Use NGC Containers for Local training:
+I understand many people are using Kaggle kernels and Colab for training. However, if you've invested in local hardware, Ross had taught in a thread on Twitter that the NGC Containers for PyTorch are very optimised and offer speedups
+
+I hope you find these helpful and also find some training or score boosts! :)
+
+Happy Kaggling!
+
+
+
 ## 2022/03/29
 
 **よく出てくるデータセットについて**
