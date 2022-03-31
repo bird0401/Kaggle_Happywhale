@@ -39,9 +39,17 @@ https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/305503
 
 ## 27
 ### ベースラインモデルの確認
-https://www.kaggle.com/aikhmelnytskyy/happywhale-arcface-baseline-eff7-tpu-768-inference  にコメントアウトしてまとめた。datasetをcolabで用いる方法がわからないため止まっている。
+https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  にコメントアウトしてまとめた。datasetをcolabで用いる方法がわからないため止まっている。
 ### notebookの使い方確認
 - GPU、TPU１週間あたり30時間まで
 - TPUは、colabと比較してKaggleの方が早い
 - Tensorflowを使う場合はGPUよりTPUの方が良い
 - link to githubすればnotebookをsaveした段階で、gitにcommitできる
+
+## 31
+### ベースラインモデルの確認
+https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  にコメントアウトしてまとめた。
+
+### Kaggle APIの導入
+参考サイト：https://dreamer-uma.com/kaggle-api-colab/
+
