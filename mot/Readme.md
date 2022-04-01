@@ -59,5 +59,5 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 ### 引き続きKaggle APIの導入
 - 違う参考サイトみてその通りにやったら、ちゃんと設定できた。
 - 参考サイト:https://kopaprin.hatenadiary.jp/entry/2020/05/07/083000
-- ダウンロードに５
-- ダウンロードに
+- ダウンロードに５分くらいかかるので、ドライブにダウンロードして、毎回そこからマウントした方が早い
+- `!kaggle competitions download -c happy-whale-and-dolphin -p /content/drive/MyDrive/Kaggle/HappyWhale-2022`のようにダウンロードできる
