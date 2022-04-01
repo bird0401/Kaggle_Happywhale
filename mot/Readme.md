@@ -52,4 +52,12 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 
 ### Kaggle APIの導入
 参考サイト：https://dreamer-uma.com/kaggle-api-colab/
+途中までやった
 
+# 4月
+## 1
+### 引き続きKaggle APIの導入
+- 違う参考サイトみてその通りにやったら、ちゃんと設定できた。
+- 参考サイト:https://kopaprin.hatenadiary.jp/entry/2020/05/07/083000
+- ダウンロードに５
+- ダウンロードに
