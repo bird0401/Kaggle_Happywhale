@@ -61,3 +61,8 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 - 参考サイト:https://kopaprin.hatenadiary.jp/entry/2020/05/07/083000
 - ダウンロードに５分くらいかかるので、ドライブにダウンロードして、毎回そこからマウントした方が早い
 - `!kaggle competitions download -c happy-whale-and-dolphin -p /content/drive/MyDrive/Kaggle/HappyWhale-2022`のようにダウンロードできる
+
+## 2
+- データセットのドライブ上でのunzipに時間かかりすぎるのと、データ量が多くcolabのディスク容量を突破してしまう
+
+→拡張機能のzip extracterをインストール
