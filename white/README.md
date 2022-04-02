@@ -1,5 +1,13 @@
 # HappyWhale 
 
+## 2022/04/02
+
+([SHORTCUT] Competition logbook - updated everyday)[https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/308991]
+
+Remove Background がでてNotebook公開されてから83あたりのスコアが増えてる。要確認
+https://www.kaggle.com/code/remekkinas/remove-background-salient-object-detection/notebook
+
+
 ## 2022/03/31
 
 BaseLine確認終わり。
