@@ -8,6 +8,10 @@ Remove Background がでてNotebook公開されてから83あたりのスコア�
 https://www.kaggle.com/code/remekkinas/remove-background-salient-object-detection/notebook
 
 
+https://www.kaggle.com/c/happy-whale-and-dolphin/discussion/309214
+
+結構簡単に動作確認できる。次試してみる。
+
 ## 2022/03/31
 
 BaseLine確認終わり。
