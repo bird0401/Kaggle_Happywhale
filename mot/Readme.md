@@ -65,4 +65,4 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 ## 2
 - データセットのドライブ上でのunzipに時間かかりすぎるのと、データ量が多くcolabのディスク容量を突破してしまう
 
-→拡張機能のzip extracterをインストール
+→拡張機能のzip extracterをインストール。colab上ではなく、ドライブ上でunzipした。
