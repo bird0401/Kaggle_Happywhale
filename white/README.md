@@ -1,5 +1,12 @@
 # HappyWhale 
 
+## 2022/04/03
+Segmentationで背景切り取って保存できるのができた
+
+全体のデータセットに適用して保存できるnotebookを作る
+
+https://www.kaggle.com/code/saki205/remove-background-salient-object-detection/data?scriptVersionId=91976209&select=task0.jpg
+
 ## 2022/04/02
 
 ([SHORTCUT] Competition logbook - updated everyday)[https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/308991]
