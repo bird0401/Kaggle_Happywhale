@@ -73,3 +73,4 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 - ドライブでunzipするとディスク容量足りなくなって途中で終わる
 - proにしようと思ったけど、大学のアカウントだと有料版に変更することができない。
 - kaggle内で作業するしかなさそう
+- notebook使ったらすぐ使えなくなった
