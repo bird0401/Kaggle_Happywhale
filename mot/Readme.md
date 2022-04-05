@@ -83,6 +83,7 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
   - ルールは今回と同様  
 - [このissue](https://github.com/bird0401/Kaggle_Happywhale/issues/31)にまとめた
 - 1位から3位まで
+- 全体的にデータセットに対するアプローチは少なめで、モデルの予測手法周りの工夫が多かった。３年前のコンペで、色々と技術的環境が違うので鵜呑みにはしないほうが良い。例えば、現在はefficientNetが主流だが、この時は色々なモデルが乱立していた。実際にresnetやsnenetなど色々なモデルが用いられている。
 
 
 
