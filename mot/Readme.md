@@ -74,3 +74,8 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 - proにしようと思ったけど、大学のアカウントだと有料版に変更することができない。
 - kaggle内で作業するしかなさそう
 - notebook使ったらすぐ使えなくなった
+
+## 5
+- ベースラインのsubmitした
+- [前回のクジラコンペの解法](https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/304504)みた
+- 212位以内が銅圏内
