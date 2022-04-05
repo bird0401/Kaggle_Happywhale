@@ -78,4 +78,11 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 ## 5
 - ベースラインのsubmitした
 - [前回のクジラコンペの解法](https://www.kaggle.com/competitions/happy-whale-and-dolphin/discussion/304504)みた
-- 212位以内が銅圏内
+- 前回のクジラコンペ
+  - 212位以内が銅圏内
+  - ルールは今回と同様  
+- [このissue](https://github.com/bird0401/Kaggle_Happywhale/issues/31)にまとめた
+- 1位から3位まで
+
+
+
