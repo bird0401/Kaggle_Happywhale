@@ -88,3 +88,10 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 ## 6
 - 引き続き前回クジラコンペの上位解法を参照した
 
+## 7
+- [現時点で最高精度のnotebook確認した](https://www.kaggle.com/code/nghiahoangtrung/swin-tranform-submission)
+  - swinというモデルを使ってる
+  - [2021年6月時点で、swin transformがくそ強いらしい](https://www.slideshare.net/ren4yu/swin-transformer-iccv21-best-paper)
+  - データセット：オリジナル＋private+
+- [現時点で2番目の精度のnotebook確認した](https://www.kaggle.com/code/gtownfoster/effv2-l-backfin-embeddings-ensemble/notebook)
+  - コード見てると前やったベースライン
