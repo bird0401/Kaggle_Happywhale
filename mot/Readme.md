@@ -114,7 +114,6 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
   - https://www.kaggle.com/code/jpbremer/backfins-arcface-tpu-effnet/notebook に対して、horizontal flip image and random rotate image (-10, 10 ) degreeをしたら精度がだいぶ良くなった。
   - 前に行った左右非対称性を使って、flip後にnew individualにする工夫をすると精度がさらに上がるかもしれない。
 - inference周りの処理どのnotebookも似たようなことしている
-- 解説
-- 
-  - 前に行った左右非対称性を使って、flip後にnew individualにする工夫をすると精度がさらに上がるかもしれない。
-  - 解説notebookを見る限りあまり詳細に解説されていない。他のnotebookも基本コピペでやっているので、swinに関してもそれで良い気がする
+- 前に行った左右非対称性を使って、flip後にnew individualにする工夫をすると精度がさらに上がるかもしれない。
+- 解説notebookを見る限りあまり詳細に解説されていない。他のnotebookも基本コピペでやっているので、swinに関してもそれで良い気がする
+- KNNは距離を測るために利用する。
