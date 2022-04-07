@@ -1,5 +1,17 @@
 # HappyWhale 
 
+## 2022/04/07
+
+Detic + Segmentation のデータセット完成
+https://www.kaggle.com/datasets/saki205/deticsegmentation
+
+うまくできず出力すらできてないものもある。要改善
+うまくできなかったものをCSVファイルにまとめた。
+
+
+half_trainの作成
+idが10以上のものだけのtrain.csv
+
 ## 2022/04/06
 
 データセットを作成するためローカル環境を整えているが
