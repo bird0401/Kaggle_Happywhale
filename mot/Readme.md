@@ -92,7 +92,29 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 - [現時点で最高精度のnotebook確認した](https://www.kaggle.com/code/nghiahoangtrung/swin-tranform-submission)
   - swinというモデルを使ってる
   - [2021年6月時点で、swin transformがくそ強いらしい](https://www.slideshare.net/ren4yu/swin-transformer-iccv21-best-paper)
+  - swinの長所としてdata augmentationをあまりしなくても安定して精度が出る
   - データセット：オリジナル＋private+
 - [現時点で2番目の精度のnotebook確認した](https://www.kaggle.com/code/gtownfoster/effv2-l-backfin-embeddings-ensemble/notebook)
   - コード見てると前やったベースラインと結構コード似てる。
   - 5つのEfficientNetB3でアンサンブル
+  - EfficientNetV2を用いている
+    - [EfficientNetV2に関する記事](https://qiita.com/omiita/items/1d96eae2b15e49235110)
+    - EfficientNetV2がすごい強いらしい
+    - 2021年4月ごろにgoogleから出てSOTAとなっている
+    - 学習時間はeffnetB7よりもかかる。SからXLまである。
+  - efficientnetB4-B7
+- [arcfaceに関する記事](https://yaakublog.com/deep_metric_learning)
+    - 学習時間はeffnetB7よりもかかる。SからXLまである。kいじ
+    - 学習時間はeffnetB7よりもかかる。SからXLまである。
+- [現時点で3番目の精度のnotebook確認した](https://www.kaggle.com/code/nealart/simple-ensemble-of-public-best-kernels-v-2-2-0)
+  - notebookにあるベースライン４つに重みをつけてアンサンブルさせただけだが、精度が良くなった
+- simple ensamble周りのnotebookはsubmitのスコアごとに重みづけをしているだけ。あまり参考にはならない。最後にやれば良い。
+- それらを省くとswinの次に強いのがやはり、[efficientnetB7を使ったモデルになる](https://www.kaggle.com/code/aikhmelnytskyy/happywhale-arcface-baseline-eff7-tpu-768-inference)
+- https://www.kaggle.com/code/nghiahoangtrung/0-720-eff-b5-640-rotate
+  - https://www.kaggle.com/code/jpbremer/backfins-arcface-tpu-effnet/notebook に対して、horizontal flip image and random rotate image (-10, 10 ) degreeをしたら精度がだいぶ良くなった。
+  - 前に行った左右非対称性を使って、flip後にnew individualにする工夫をすると精度がさらに上がるかもしれない。
+- inference周りの処理どのnotebookも似たようなことしている
+- 解説
+- 
+  - 前に行った左右非対称性を使って、flip後にnew individualにする工夫をすると精度がさらに上がるかもしれない。
+  - 解説notebookを見る限りあまり詳細に解説されていない。他のnotebookも基本コピペでやっているので、swinに関してもそれで良い気がする
