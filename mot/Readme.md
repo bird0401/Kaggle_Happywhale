@@ -104,7 +104,7 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
     - 学習時間はeffnetB7よりもかかる。SからXLまである。
   - efficientnetB4-B7
 - [arcfaceに関する記事](https://yaakublog.com/deep_metric_learning)
-    - 学習時間はeffnetB7よりもかかる。SからXLまである。kいじ
+    - 学習時間はeffnetB7よりもかかる。SからXLまである。
     - 学習時間はeffnetB7よりもかかる。SからXLまである。
 - [現時点で3番目の精度のnotebook確認した](https://www.kaggle.com/code/nealart/simple-ensemble-of-public-best-kernels-v-2-2-0)
   - notebookにあるベースライン４つに重みをつけてアンサンブルさせただけだが、精度が良くなった
@@ -117,3 +117,9 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 - 前に行った左右非対称性を使って、flip後にnew individualにする工夫をすると精度がさらに上がるかもしれない。
 - 解説notebookを見る限りあまり詳細に解説されていない。他のnotebookも基本コピペでやっているので、swinに関してもそれで良い気がする
 - KNNは距離を測るために利用する。
+
+## 8
+### swinにinference機能付け足しを行なった
+- swinを投稿する前のnotebookをまずは動かした。[ベースとなるnotebook](https://www.kaggle.com/code/jpbremer/backfins-arcface-tpu-effnet/notebook)が紹介されていため。
+- ある程度補完できたのでsubmitしといた。おそらくどこかでエラー起こると思う。
+  - inference周りに限らず学習部分など他にも修正箇所があったので補完した。
