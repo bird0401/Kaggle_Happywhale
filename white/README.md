@@ -15,6 +15,13 @@ https://www.kaggle.com/code/saki205/explore-segmentation-datset/notebook?scriptV
 
 https://www.kaggle.com/code/leoooo333/background-remove-tutorial
 
+tfrecords + 背景を消したやつをどうするかー＞背景を消したものもTFRecordにする。
+
+https://www.kaggle.com/code/saki205/effv2-l-backfin-embeddings-ensemble-white
+これのコード精読中。学習してるのか既存の学習weightを読み込んでるのかよく分からず、詰まった。
+
+
+
 ## 2022/04/07
 
 Detic + Segmentation のデータセット完成
