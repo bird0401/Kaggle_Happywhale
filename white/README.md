@@ -1,5 +1,9 @@
 # HappyWhale 
 
+## 2022/04/08
+
+実験環境を作る。
+
 ## 2022/04/07
 
 Detic + Segmentation のデータセット完成
