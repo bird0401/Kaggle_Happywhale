@@ -4,6 +4,11 @@
 
 実験環境を作る。
 
+Detic + Segmentation のデータセットをざっと見れるコードできた。
+https://www.kaggle.com/code/saki205/explore-segmentation-datset/notebook?scriptVersionId=92428272
+
+白黒だとうまくいってないやつや、文字が入ってるとうまくいってないやつが多い印象。
+
 ## 2022/04/07
 
 Detic + Segmentation のデータセット完成
