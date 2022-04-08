@@ -9,6 +9,12 @@ https://www.kaggle.com/code/saki205/explore-segmentation-datset/notebook?scriptV
 
 白黒だとうまくいってないやつや、文字が入ってるとうまくいってないやつが多い印象。
 
+![image](https://user-images.githubusercontent.com/48637189/162384692-8c89bb1a-bdcf-490d-8a71-7c0d07f3cb02.png)
+
+パラメータとコントラストを強くする処理をしてsegmentationの精度を向上させたノートブック出現試してみる。
+
+https://www.kaggle.com/code/leoooo333/background-remove-tutorial
+
 ## 2022/04/07
 
 Detic + Segmentation のデータセット完成
