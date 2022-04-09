@@ -8,6 +8,14 @@ species : 種の名前
 
 individual_id : 個体ID（これを予測する）
 
+## データの数
+
+train ; 51033
+test : 27956
+
+indivisualの種類 : 15587
+speciesの種類 : 25
+
 ## 提出の形式
 
 一枚の画像に対して、五つの予測をする。
