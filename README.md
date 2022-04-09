@@ -11,9 +11,11 @@ individual_id : 個体ID（これを予測する）
 ## データの数
 
 train ; 51033
+
 test : 27956
 
 indivisualの種類 : 15587
+
 speciesの種類 : 25
 
 ## 提出の形式
