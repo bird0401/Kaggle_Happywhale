@@ -130,4 +130,3 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 - 最終的にswinが実行できるところまで持って来れた
 - 軽く実行できるように、image sizeを小さくしたりしているので、元のnotebookと同じ条件でsave allしてみる。
 - TPU利用時間以内に学習が終わるかが懸念点。
-- https://www.kaggle.com/code/nghiahoangtrung/0-720-eff-b5-640-rotate
