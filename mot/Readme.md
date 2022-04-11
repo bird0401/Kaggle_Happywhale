@@ -130,3 +130,16 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 - 最終的にswinが実行できるところまで持って来れた
 - 軽く実行できるように、image sizeを小さくしたりしているので、元のnotebookと同じ条件でsave allしてみる。
 - TPU利用時間以内に学習が終わるかが懸念点。
+
+## 10
+### swin実行時のエラー解消
+- [こちらのissue参照](https://github.com/bird0401/Kaggle_Happywhale/issues/45)
+- 色々試行錯誤したけど直らなかった
+- notebookのcommentのところで同じエラーになっている人を見つけたので、質問をしてその答え待ち。
+
+## 11
+### swin実行時のエラー解消
+- [こちらのissue参照](https://github.com/bird0401/Kaggle_Happywhale/issues/45)
+- 質問の答え返ってきたので、それ参考にしたらエラー全て治った。
+- input_size, epoch, model_name元に戻してsave and runした
+- [こちらのissue参照](https://github.com/bird0401/Kaggle_Happywhale/issues/45)
