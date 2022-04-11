@@ -142,4 +142,3 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 - [こちらのissue参照](https://github.com/bird0401/Kaggle_Happywhale/issues/45)
 - 質問の答え返ってきたので、それ参考にしたらエラー全て治った。
 - input_size, epoch, model_name元に戻してsave and runした
-- [こちらのissue参照](https://github.com/bird0401/Kaggle_Happywhale/issues/45)
