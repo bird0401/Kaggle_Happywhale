@@ -142,3 +142,12 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 - [こちらのissue参照](https://github.com/bird0401/Kaggle_Happywhale/issues/45)
 - 質問の答え返ってきたので、それ参考にしたらエラー全て治った。
 - input_size, epoch, model_name元に戻してsave and runした
+
+## 12
+- swinは精度の再現ができなかった
+- ひとまずpublicのemsembleを提出した
+
+## 14
+- segmentationして物体部分だけ白くしたアルファラベルを用いて、4 channel化をすることに取り組んだ。
+- whiteのセグメンテーションしたデータをそのまま利用するのが簡単そう。
+- 過去クジラの1stの回答ではmaskしたデータをrleで圧縮したものを(id,rle)のペアでcsvに保存していたが、今回その手法を用いる必要があるのか。
