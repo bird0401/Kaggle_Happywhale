@@ -151,3 +151,7 @@ https://colab.research.google.com/drive/1qlhjcU584XILKdXaUQoqEv1IiD3xW9zW  に�
 - segmentationして物体部分だけ白くしたアルファラベルを用いて、4 channel化をすることに取り組んだ。
 - whiteのセグメンテーションしたデータをそのまま利用するのが簡単そう。
 - 過去クジラの1stの回答ではmaskしたデータをrleで圧縮したものを(id,rle)のペアでcsvに保存していたが、今回その手法を用いる必要があるのか。
+
+## 15
+- マージした
+- マージ後はslackで作業
